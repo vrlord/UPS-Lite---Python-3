@@ -48,25 +48,25 @@ PowerOnReset(bus)
 QuickStart(bus)
 
 
-print "  "
-print "Initialize the MAX17040 ......"
+print("  ")
+print("Initialize the MAX17040 ......")
 
 
 while True:
 
- print "++++++++++++++++++++"
- print "Voltage:%5.2fV" % readVoltage(bus)
+ print("++++++++++++++++++++")
+ print("Voltage:%5.2fV" % readVoltage(bus))
 
- print "Battery:%5i%%" % readCapacity(bus)
+ print("Battery:%5i%%" % readCapacity(bus))
  
  
  if readCapacity(bus) == 100:
 
-        print "Battery FULL"
+        print("Battery FULL")
 
  if readCapacity(bus) < 5:
 
-        print "Battery LOW"
+        print("Battery LOW")
 
 
 		
@@ -74,12 +74,12 @@ while True:
 		
  if (GPIO.input(4) == GPIO.HIGH):
         
-		print "Power Adapter Plug In " 
+        print("Power Adapter Plug In ")
 		
  if (GPIO.input(4) == GPIO.LOW):
         
-		print "Power Adapter Unplug"
+        print("Power Adapter Unplug")
 		
 		
- print "++++++++++++++++++++"
+ print("++++++++++++++++++++")
  time.sleep(2)
